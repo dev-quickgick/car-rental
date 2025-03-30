@@ -13,11 +13,11 @@ export default async function AdminLayout({ children }: { children: ReactNode })
 
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-64 bg-white shadow-md mt-28">
+      <div className="w-64 bg-white shadow-md">
         <div className="p-6">
           <Link href="/" className="flex items-center space-x-2">
             <Car className="h-6 w-6 text-red-600" />
-            <span className="text-xl font-bold">Infiniti Auto</span>
+            <span className="text-xl font-bold text-black">Infiniti Auto</span>
           </Link>
         </div>
         <div>
@@ -57,7 +57,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
 
       {/* Main content */}
       <div className="flex-1 overflow-auto">
-        <main className="p-6 mt-28">{children}</main>
+        <main className="p-6">{children}</main>
       </div>
       <Toaster />
     </div>
