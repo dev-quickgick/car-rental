@@ -6,6 +6,7 @@ import Title from "@/components/Title"
 import AboutSection from "@/components/about-section"
 import ProcessSection from "@/components/process-section"
 import { getCars } from "@/lib/db"
+import HeroSection from "@/components/hero"
 
 export default async function Home() {
   const cars = await getCars()
@@ -24,17 +25,18 @@ export default async function Home() {
           />
         </div>
 
-        <div className="container relative z-10 mx-auto px-16 pt-32 pb-20 flex flex-col lg:flex-row items-center gap-8">
+        {/* <div className="container relative z-10 mx-auto px-16 pt-32 pb-20 flex flex-col lg:flex-row items-center gap-8">
           {/* Reservation Form */}
-          <ReservationForm />
+          {/* <ReservationForm /> */}
 
           {/* Hero Content */}
-          <div className="w-full lg:w-6/12 text-black pl-0 lg:pl-12 hidden lg:block fadeInRight">
+          {/* <div className="w-full lg:w-6/12 text-black pl-0 lg:pl-12 hidden lg:block fadeInRight">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Get 15% off your rental</h1>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Plan your trip now</h2>
             <p className="text-xl mb-8">Experience the freedom of the open road with our premium car rentals.</p>
           </div>
-        </div>
+        </div> */}
+        <HeroSection/>
       </section>
 
       <StatsSection />
