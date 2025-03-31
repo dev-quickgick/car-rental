@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
-import { Calendar, CarIcon } from "lucide-react"
+import { Calendar, CarIcon, Fuel, Gauge, User } from "lucide-react"
 import type { Car } from "@/lib/supabase"
 
 interface VehicleGridProps {
@@ -49,7 +49,7 @@ export default function VehicleGrid({ initialCars = [] }: VehicleGridProps) {
                   <div className="bg-gray-100 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_5px_rgba(239,68,68,0.7)]">
                     {/* Image section */}
                     <div className="relative h-40">
-                      <Image src="/placeholder.svg?height=200&width=350" alt={car.name} fill className="object-cover" />
+                      <Image src={car.image_url} alt={car.name} fill className="object-cover" />
                     </div>
 
                     {/* Information section */}
@@ -61,14 +61,30 @@ export default function VehicleGrid({ initialCars = [] }: VehicleGridProps) {
                         <span className="text-red-600 text-lg font-bold">${car.price_per_day}/Day</span>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-2 text-center text-xs mb-4 text-gray-600">
+                      <div className="grid grid-cols-3 gap-2 text-center text-xs mb-4 text-gray-600">
                         <div className="flex flex-col items-center">
-                          <CarIcon className="h-4 w-4 text-gray-600" />
-                          <span>{car.brand}</span>
+                          <User className="h-6 w-6 text-gray-600" />
+                          <span>{car.seats}</span>
                         </div>
                         <div className="flex flex-col items-center">
-                          <Calendar className="h-4 w-4 text-gray-600" />
+                          <CarIcon className="h-6 w-6 text-gray-600" />
+                          <span>{car.transmission}</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <Fuel className="h-6 w-6 text-gray-600" />
+                          <span>{car.fuel}</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <Calendar className="h-6 w-6 text-gray-600" />
                           <span>{car.year}</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <Calendar className="h-6 w-6 text-gray-600" />
+                          <span>{car.auto}</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <Gauge className="h-6 w-6 text-gray-600" />
+                          <span>{car.mileage}</span>
                         </div>
                       </div>
 

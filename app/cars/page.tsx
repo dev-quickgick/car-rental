@@ -23,8 +23,8 @@ export default async function CarsPage() {
       </div>
 
       {/* Vehicle Grid Section */}
-      {/* <VehicleGrid initialCars={cars} /> */}
-      <FinalCarouselDemo></FinalCarouselDemo>
+      <VehicleGrid initialCars={cars} />
+      {/* <FinalCarouselDemo></FinalCarouselDemo> */}
 
       {/* Process Section */}
       <ProcessSection />
