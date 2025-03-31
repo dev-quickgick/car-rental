@@ -7,6 +7,7 @@ import AboutSection from "@/components/about-section"
 import ProcessSection from "@/components/process-section"
 import { getCars } from "@/lib/db"
 import HeroSection from "@/components/hero"
+import FinalCarouselDemo from "@/components/vehicle-carousel"
 
 export default async function Home() {
   const cars = await getCars()
@@ -15,7 +16,7 @@ export default async function Home() {
     <main className="text-gray-800">
       {/* Hero Section */}
       <section className="relative min-h-screen">
-        <div className="absolute inset-0 z-0">
+        {/* <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-background.jpg"
             alt="Desert mountain landscape with car"
@@ -23,7 +24,7 @@ export default async function Home() {
             className="object-cover"
             priority
           />
-        </div>
+        </div> */}
 
         {/* <div className="container relative z-10 mx-auto px-16 pt-32 pb-20 flex flex-col lg:flex-row items-center gap-8">
           {/* Reservation Form */}
@@ -36,6 +37,7 @@ export default async function Home() {
             <p className="text-xl mb-8">Experience the freedom of the open road with our premium car rentals.</p>
           </div>
         </div> */}
+
         <HeroSection/>
       </section>
 
@@ -51,7 +53,8 @@ export default async function Home() {
           description="Explore our diverse range of vehicles to find the perfect match for your journey. From compact cars to luxury SUVs, we have options to suit every need and budget."
         />
       </div>
-      <VehicleCategories initialCars={cars} />
+      {/* <VehicleCategories initialCars={cars} /> */}
+      <FinalCarouselDemo></FinalCarouselDemo>
 
       {/* About Section */}
       <AboutSection />
