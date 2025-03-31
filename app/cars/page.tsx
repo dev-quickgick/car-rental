@@ -3,6 +3,7 @@ import VehicleGrid from "@/components/VehicleGrid"
 import ProcessSection from "@/components/process-section"
 import Title from "@/components/Title"
 import { getCars } from "@/lib/db"
+import FinalCarouselDemo from "@/components/vehicle-carousel"
 
 export default async function CarsPage() {
   const cars = await getCars()
@@ -22,7 +23,8 @@ export default async function CarsPage() {
       </div>
 
       {/* Vehicle Grid Section */}
-      <VehicleGrid initialCars={cars} />
+      {/* <VehicleGrid initialCars={cars} /> */}
+      <FinalCarouselDemo></FinalCarouselDemo>
 
       {/* Process Section */}
       <ProcessSection />

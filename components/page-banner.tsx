@@ -24,10 +24,10 @@ export default function PageBanner({ title, breadcrumbs }: PageBannerProps) {
   }, [])
 
   return (
-    <div ref={bannerRef} className="relative pt-32 md:pt-40">
+    <div ref={bannerRef} className="relative pt-20 md:pt-20">
       <div className="relative h-64">
-        <Image src="/images/page-banner-bg.jpg" alt="Page banner background" fill className="object-cover" />
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
+        <Image src="/images/fact-bg.jpg" alt="Page banner background" fill className="object-cover" />
+        <div className="absolute inset-0 bg-blue-950 bg-opacity-85" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
           <h1
             className={`text-4xl font-bold mb-4 transition-all duration-700 transform ${

@@ -110,7 +110,7 @@ export default function FeaturesSection() {
             style={{ transitionDelay: "0.3s" }}
           >
             <div className="relative h-48 md:h-60">
-              <Image src="/placeholder.svg?height=300&width=500" alt="Luxury car" fill className="object-contain" />
+              <Image src="/images/car-1.png?height=300&width=500" alt="Luxury car" fill className="object-contain" />
             </div>
           </div>
 

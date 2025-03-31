@@ -51,12 +51,12 @@ export default function ProcessSection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/multiplecar.jpg?height=400&width=1920"
+          src="/images/bg-1.jpg?height=400&width=1920"
           alt="Vintage cars background"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-80"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-90"></div>
       </div>
 
       {/* Content */}

@@ -38,28 +38,28 @@ export default function AboutUsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
-              <Image src="/placeholder.svg" alt="John Thompson" fill className="object-cover" />
+              <Image src="/images/team-1.jpg" alt="John Thompson" fill className="object-cover" />
             </div>
             <h3 className="text-xl font-bold text-gray-900">John Thompson</h3>
             <p className="text-red-600 font-medium">CEO & Co-Founder</p>
           </div>
           <div className="text-center">
             <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
-              <Image src="/placeholder.svg" alt="Sarah Thompson" fill className="object-cover" />
+              <Image src="/images/team-2.jpg" alt="Sarah Thompson" fill className="object-cover" />
             </div>
             <h3 className="text-xl font-bold text-gray-900">Sarah Thompson</h3>
             <p className="text-red-600 font-medium">COO & Co-Founder</p>
           </div>
           <div className="text-center">
             <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
-              <Image src="/placeholder.svg" alt="Michael Chen" fill className="object-cover" />
+              <Image src="/images/team-3.jpg" alt="Michael Chen" fill className="object-cover" />
             </div>
             <h3 className="text-xl font-bold text-gray-900">Michael Chen</h3>
             <p className="text-red-600 font-medium">CTO</p>
           </div>
           <div className="text-center">
             <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
-              <Image src="/placeholder.svg" alt="Emily Rodriguez" fill className="object-cover" />
+              <Image src="/images/team-4.jpg" alt="Emily Rodriguez" fill className="object-cover" />
             </div>
             <h3 className="text-xl font-bold text-gray-900">Emily Rodriguez</h3>
             <p className="text-red-600 font-medium">CMO</p>

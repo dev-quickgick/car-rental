@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Car, Calendar, Fuel, Gauge } from "lucide-react"
+import { Car, Calendar, Fuel, Gauge, Users } from "lucide-react"
 
 interface VehicleCardProps {
   id: number | string
@@ -13,6 +13,7 @@ interface VehicleCardProps {
   transmission?: string
   fuel?: string
   mileage?: string | number
+  auto?: string
 }
 
 export default function FinalVehicleCard({
@@ -25,6 +26,7 @@ export default function FinalVehicleCard({
   transmission = "Manual",
   fuel = "Petrol",
   mileage = 10,
+  auto
 }: VehicleCardProps) {
   // Format price to display with dollar sign
   const formatPrice = (price: number | string) => {
@@ -41,10 +43,10 @@ export default function FinalVehicleCard({
         </div>
 
         {/* Card Content */}
-        <div className="bg-gray-50 p-3 flex-grow flex flex-col">
+        <div className="bg-gray-50 p-3 flex-grow flex flex-col gap-2">
           {/* Car Name and Brand */}
-          <h3 className="text-lg font-bold text-center text-gray-900">{name}</h3>
-          <p className="text-center text-gray-500 mb-3 text-sm">{brand}</p>
+          <h3 className="text-2xl font-bold text-center text-gray-900">{name}</h3>
+          <p className="text-center text-gray-500 mb-3 text-lg">{brand}</p>
 
           {/* Price */}
           <div className="bg-white rounded-full py-1.5 mb-3 shadow-sm">
@@ -52,56 +54,49 @@ export default function FinalVehicleCard({
           </div>
 
           {/* Specifications Grid */}
-          <div className="grid grid-cols-3 gap-1 mb-3 text-xs">
+          <div className="grid grid-cols-3 gap-4 mb-3 text-xs mx-3">
             {/* Seats */}
-            <div className="flex flex-col items-center">
-              <Car className="h-4 w-4 text-gray-600 mb-1" />
-              <span className="text-gray-700">{seats}</span>
+            <div className="flex gap-1 items-center">
+              <Users className="h-6 w-6 text-gray-600 mb-1" />
+              <span className="font-bold text-md text-gray-700">{seats}</span>
             </div>
 
-            {/* Transmission */}
-            <div className="flex flex-col items-center">
-              <svg
-                className="h-4 w-4 text-gray-600 mb-1"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <path d="M4 12h16" />
-                <path d="M12 4v16" />
-              </svg>
-              <span className="text-gray-700">{transmission}</span>
+
+            <div className="flex gap-1 items-center">
+              <Car className="h-6 w-6 text-gray-600 mb-1" />
+              <span className="text-gray-700 font-bold text-md">{transmission}</span>
             </div>
 
             {/* Fuel */}
-            <div className="flex flex-col items-center">
-              <Fuel className="h-4 w-4 text-gray-600 mb-1" />
-              <span className="text-gray-700">{fuel}</span>
+            <div className="flex gap-1 items-center">
+              <Fuel className="h-6 w-6 text-gray-600 mb-1" />
+              <span className="text-gray-700 font-bold text-md">{fuel}</span>
             </div>
 
             {/* Year */}
-            <div className="flex flex-col items-center">
-              <Calendar className="h-4 w-4 text-gray-600 mb-1" />
-              <span className="text-gray-700">{year}</span>
+            <div className="flex gap-1 items-center">
+              <Calendar className="h-6 w-6 text-gray-600 mb-1" />
+              <span className="text-gray-700 font-bold text-md">{year}</span>
             </div>
 
             {/* Empty or Additional Spec */}
-            <div className="flex flex-col items-center">
-              <Calendar className="h-4 w-4 text-gray-600 mb-1" />
-              <span className="text-gray-700"></span>
+            <div className="flex gap-1 items-center">
+              <Calendar className="h-6 w-6 text-gray-600 mb-1" />
+              <span className="text-gray-700 font-bold text-md">{auto}</span>
             </div>
 
             {/* Mileage */}
-            <div className="flex flex-col items-center">
-              <Gauge className="h-4 w-4 text-gray-600 mb-1" />
-              <span className="text-gray-700">{mileage}</span>
+            <div className="flex gap-1 items-center">
+              <Gauge className="h-6 w-6 text-gray-600 mb-1" />
+              <span className="text-gray-700 font-bold text-md">{mileage}</span>
             </div>
           </div>
 
           {/* Book Now Button - Added z-index to position it above pagination dots */}
-          <Button className="w-full bg-red-600 hover:bg-red-700 text-white rounded-full py-1 h-9 text-sm relative z-20">
+          <Button onClick={(e) => {
+            e.preventDefault()
+            window.scrollTo({ top: 0, behavior: "smooth" })
+            }} className="w-full bg-red-600 hover:bg-red-700 text-white rounded-full py-1 h-9 text-sm relative z-20">
             Book Now
           </Button>
         </div>

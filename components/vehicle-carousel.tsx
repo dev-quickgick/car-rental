@@ -33,7 +33,7 @@ export default function FinalCarouselDemo() {
 
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <Sliding3DCarousel autoRotate={true} autoRotateSpeed={8000} className="w-full">
         {cars.map((vehicle) => (
           <FinalVehicleCard key={vehicle.id} {...vehicle} />

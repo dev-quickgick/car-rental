@@ -36,7 +36,7 @@ export default function ContactPage() {
   useEffect(() => {
     // Create a reusable Intersection Observer
     const createObserver = (
-      ref: React.RefObject<HTMLElement>,
+      ref: React.RefObject<HTMLDivElement | null>,
       setVisibleFn: React.Dispatch<React.SetStateAction<boolean>>,
     ) => {
       const observer = new IntersectionObserver(
@@ -56,7 +56,7 @@ export default function ContactPage() {
       return observer
     }
 
-    // Create observers for each section
+    // // Create observers for each section
     const contactInfoObserver = createObserver(contactInfoRef, setContactInfoVisible)
     const formSectionObserver = createObserver(formSectionRef, setFormSectionVisible)
     const socialSectionObserver = createObserver(socialSectionRef, setSocialSectionVisible)
@@ -206,7 +206,7 @@ export default function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="bg-white"
+                  className="bg-white text-black"
                 />
                 <Input
                   name="email"
@@ -215,7 +215,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-white"
+                  className="bg-white text-black"
                 />
               </div>
 
@@ -225,7 +225,7 @@ export default function ContactPage() {
                   placeholder="Your Phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="bg-white"
+                  className="bg-white text-black"
                 />
                 <Input
                   name="subject"
@@ -233,14 +233,14 @@ export default function ContactPage() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="bg-white"
+                  className="bg-white text-black"
                 />
               </div>
 
               <Textarea
                 name="message"
                 placeholder="Message"
-                className="min-h-[150px] bg-white"
+                className="min-h-[150px] bg-white text-black"
                 value={formData.message}
                 onChange={handleChange}
                 required
@@ -248,7 +248,7 @@ export default function ContactPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-white hover:bg-gray-100 text-red-600 font-bold"
+                className="w-full bg-white text-red-600 hover:bg-red-600 hover:text-white font-bold"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

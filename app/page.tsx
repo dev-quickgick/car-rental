@@ -16,15 +16,15 @@ export default async function Home() {
     <main className="text-gray-800">
       {/* Hero Section */}
       <section className="relative min-h-screen">
-        {/* <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-background.jpg"
+            src="/images/carousel-2.jpg"
             alt="Desert mountain landscape with car"
             fill
             className="object-cover"
             priority
           />
-        </div> */}
+        </div>
 
         {/* <div className="container relative z-10 mx-auto px-16 pt-32 pb-20 flex flex-col lg:flex-row items-center gap-8">
           {/* Reservation Form */}

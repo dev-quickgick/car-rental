@@ -118,7 +118,7 @@ export default function AboutSection() {
 
               <div className="flex items-center">
                 <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white">
-                  <Image src="/images/profile.jpg" alt="William Burgess" fill className="object-cover" />
+                  <Image src="/images/attachment-img.jpg" alt="William Burgess" fill className="object-cover" />
                 </div>
                 <div className="ml-3">
                   <h4 className="text-base font-bold">William Burgess</h4>
@@ -174,7 +174,7 @@ export default function AboutSection() {
                   boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
                 }}
               >
-                <Image src="/images/driving.jpg" alt="Luxury car keys" fill className="object-cover" />
+                <Image src="/images/about-img-1.jpg" alt="Luxury car keys" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent pointer-events-none"></div>
               </div>
 
@@ -208,7 +208,7 @@ export default function AboutSection() {
                   boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
                 }}
               >
-                <Image src="/images/familycar.jpg" alt="Vintage car" fill className="object-cover" />
+                <Image src="/images/about-img.jpg" alt="Vintage car" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent pointer-events-none"></div>
               </div>
             </div>

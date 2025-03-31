@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react"
 import CountUp from "react-countup"
 import { ThumbsUp, Car, Building, Clock } from "lucide-react"
+import Image from "next/image"
 
 const stats = [
   { icon: <ThumbsUp className="w-10 h-10 text-white" />, value: 829, label: "Happy Clients", delay: 0.1 },
@@ -34,7 +35,17 @@ export default function StatsSection() {
   }, [])
 
   return (
-    <div ref={sectionRef} className="w-full bg-[url('/images/bluebackground.jpg')] py-12 px-6">
+    <div ref={sectionRef} className="relative w-full py-12 px-6 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/fact-bg.jpg"
+          alt="Desert mountain landscape with car"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-blue-950 bg-opacity-80"></div>
+      </div>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {stats.map((stat, index) => (
           <div
