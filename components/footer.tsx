@@ -179,7 +179,7 @@ export default function Footer() {
       {/* Back to top button */}
       <Link
         href="#"
-        className="absolute bottom-8 right-8 w-12 h-12 rounded-full bg-red-600 flex items-center justify-center hover:bg-red-700 transition-colors duration-300"
+        className=" fixed bottom-8 right-8 w-12 h-12 rounded-full bg-red-600 flex items-center justify-center hover:bg-red-700 transition-colors duration-300"
         onClick={(e) => {
           e.preventDefault()
           window.scrollTo({ top: 0, behavior: "smooth" })

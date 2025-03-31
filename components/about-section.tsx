@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,6 +27,18 @@ export default function AboutSection() {
 
     return () => observer.disconnect()
   }, [])
+
+    // Track mouse movement for 3D effect
+    useEffect(() => {
+      const handleMouseMove = (e: MouseEvent) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 20
+        const y = (e.clientY / window.innerHeight - 0.5) * 20
+        setMousePosition({ x, y })
+      }
+  
+      window.addEventListener("mousemove", handleMouseMove)
+      return () => window.removeEventListener("mousemove", handleMouseMove)
+    }, [])
 
   return (
     <section ref={sectionRef} className="py-24">
@@ -105,7 +118,7 @@ export default function AboutSection() {
 
               <div className="flex items-center">
                 <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white">
-                  <Image src="../public/placeholder.svg" alt="William Burgess" fill className="object-cover" />
+                  <Image src="/images/profile.jpg" alt="William Burgess" fill className="object-cover" />
                 </div>
                 <div className="ml-3">
                   <h4 className="text-base font-bold">William Burgess</h4>
@@ -123,30 +136,83 @@ export default function AboutSection() {
             style={{ transitionDelay: "0.3s" }}
           >
             {/* Red vertical line on the right side */}
-            <div className="absolute right-0 top-0 bottom-0 w-2 bg-red-600"></div>
+            {/* <div className="absolute right-0 top-0 bottom-0 w-2 bg-red-600 ml-20"></div> */}
 
             {/* Images container with slight padding to accommodate the red line */}
-            <div className="pr-6">
+            {/* <div className="pr-6"> */}
               {/* Top image - Hand holding car keys - SMALLER */}
-              <div className="relative h-[250px] mb-6 rounded-lg overflow-hidden">
+              {/* <div className="relative h-[250px] mb-6 rounded-lg overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=250&width=600"
                   alt="Hand holding car keys"
                   fill
                   className="object-cover"
                 />
-              </div>
+              </div> */}
 
               {/* Bottom image - Vintage car with person - LARGER */}
-              <div className="relative h-[450px] rounded-lg overflow-hidden">
+              {/* <div className="relative h-[450px] rounded-lg overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=450&width=600"
                   alt="Vintage car with person"
                   fill
                   className="object-cover"
                 />
+              </div> */}
+            {/* </div> */}
+
+            <div className="pr-6 relative h-[600px]">
+              {/* Top image - Luxury car keys */}
+              <div
+                className="absolute top-0 right-0 w-[90%] h-[280px] rounded-lg overflow-hidden shadow-xl z-10"
+                style={{
+                  transform: isVisible
+                    ? `perspective(1000px) rotateX(${mousePosition.y * 0.05}deg) rotateY(${mousePosition.x * 0.05}deg) translateZ(20px)`
+                    : "none",
+                  transformStyle: "preserve-3d",
+                  transition: "transform 0.3s ease-out",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+                }}
+              >
+                <Image src="/images/driving.jpg" alt="Luxury car keys" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent pointer-events-none"></div>
+              </div>
+
+              {/* Middle image - Sports car */}
+              <div
+                className="absolute top-[180px] left-0 w-[85%] h-[250px] rounded-lg overflow-hidden shadow-xl z-20"
+                style={{
+                  transform: isVisible
+                    ? `perspective(1000px) rotateX(${mousePosition.y * -0.03}deg) rotateY(${mousePosition.x * -0.03}deg) translateZ(40px)`
+                    : "none",
+                  transformStyle: "preserve-3d",
+                  transition: "transform 0.3s ease-out",
+                  transitionDelay: "0.1s",
+                  boxShadow: "0 15px 35px rgba(0,0,0,0.25)",
+                }}
+              >
+                <Image src="/images/mercedes.jpg" alt="Sports car" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent pointer-events-none"></div>
+              </div>
+
+              {/* Bottom image - Vintage car */}
+              <div
+                className="absolute bottom-0 right-0 w-[90%] h-[280px] rounded-lg overflow-hidden shadow-xl z-10"
+                style={{
+                  transform: isVisible
+                    ? `perspective(1000px) rotateX(${mousePosition.y * 0.04}deg) rotateY(${mousePosition.x * 0.04}deg) translateZ(20px)`
+                    : "none",
+                  transformStyle: "preserve-3d",
+                  transition: "transform 0.3s ease-out",
+                  transitionDelay: "0.2s",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+                }}
+              >
+                <Image src="/images/familycar.jpg" alt="Vintage car" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent pointer-events-none"></div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ export default function StatsSection() {
   }, [])
 
   return (
-    <div ref={sectionRef} className="w-full bg-navy-900 py-12 px-6">
+    <div ref={sectionRef} className="w-full bg-[url('/images/bluebackground.jpg')] py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {stats.map((stat, index) => (
           <div

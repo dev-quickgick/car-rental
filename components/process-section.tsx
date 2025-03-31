@@ -51,7 +51,7 @@ export default function ProcessSection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/placeholder.svg?height=400&width=1920"
+          src="/images/multiplecar.jpg?height=400&width=1920"
           alt="Vintage cars background"
           fill
           className="object-cover"
