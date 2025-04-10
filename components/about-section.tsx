@@ -53,9 +53,11 @@ export default function AboutSection() {
             <h1 className="text-5xl font-bold text-navy-900">INFINITI AUTO GROUP</h1>
             <h2 className="text-5xl font-bold text-red-600 mb-6">About</h2>
             <p className="text-gray-600 text-sm mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi
-              accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia
-              distinctio.
+            At Infiniti Auto Group, we are more than just a car service 
+            <br></br>
+            we are a legacy of trust, excellence, and passion for automobiles. 
+            <br />
+            With years of experience in the automotive industry, we are committed to delivering high-quality vehicles, unparalleled customer service, and a seamless driving experience that exceeds expectations.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -65,7 +67,7 @@ export default function AboutSection() {
                 </div>
                 <h3 className="text-lg font-bold text-center mb-1">Our Vision</h3>
                 <p className="text-gray-600 text-center text-xs">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                To be the most trusted and innovative automotive group, inspiring confidence in every mile and delivering value beyond the road.
                 </p>
               </div>
 
@@ -75,14 +77,13 @@ export default function AboutSection() {
                 </div>
                 <h3 className="text-lg font-bold text-center mb-1">Our Mision</h3>
                 <p className="text-gray-600 text-center text-xs">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                To empower our customers with exceptional vehicles, outstanding service, and reliable support, making every journey a remarkable experience.
                 </p>
               </div>
             </div>
 
             <p className="border-l-4 border-navy-800 pl-4 mb-8 text-gray-600 text-sm">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam ipsum. Sed suscipit dolorem
-              libero sequi aut natus debitis reprehenderit facilis quaerat similique, est at in eum. Quo, obcaecat in!
+            Our team of dedicated professionals is driven by a love for cars and a deep respect for our customers. Whether you're looking to rent, buy, or simply explore — we are here to make the process smooth, transparent, and enjoyable.
             </p>
 
             <div className="flex mb-8">

@@ -28,19 +28,19 @@ export default function ProcessSection() {
   const steps = [
     {
       title: "Come In Contact",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!",
+      description: "Reach out to us via phone, email, or visit our location. Our team is always ready to assist and guide you through the process.",
       number: "01",
       delay: 0.5,
     },
     {
       title: "Choose A Car",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!",
+      description: "Browse through our wide selection of premium vehicles and pick the one that fits your needs and lifestyle.",
       number: "02",
       delay: 0.7,
     },
     {
       title: "Enjoy Driving",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!",
+      description: "Drive off with confidence and comfort. We take care of the rest so you can focus on the journey ahead.",
       number: "03",
       delay: 0.9,
     },
@@ -73,8 +73,7 @@ export default function ProcessSection() {
             className={`text-gray-300 max-w-4xl mx-auto text-sm fadeInUp ${isVisible ? "active" : ""}`}
             style={{ transitionDelay: "0.3s" }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi
-            accusantium at cum harum, excepturi, quia tempora cupiditate!
+            From first contact to getting behind the wheel, we make the entire process simple, transparent, and enjoyable — just how it should be.
           </p>
         </div>
 

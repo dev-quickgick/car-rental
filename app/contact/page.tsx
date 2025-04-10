@@ -167,7 +167,9 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-red-600">Contact Us</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Lorem, ipsum dolor sit amet consectetur adipiscing elit. Aliquid, laudantium.
+          Have a question, need assistance, or ready to book your ride?
+          <br></br>
+          Get in touch with us — we're here to help you hit the road with confidence.
           </p>
         </div>
 

@@ -35,7 +35,7 @@ export default function FinalVehicleCard({
   }
 
   return (
-    <Card className="w-full overflow-hidden rounded-xl border border-gray-200 shadow-md">
+    <Card className="w-xl overflow-hidden rounded-xl border border-gray-200 shadow-md">
       <div className="flex flex-col h-full">
         {/* Car Image */}
         <div className="h-40 bg-gray-100 overflow-hidden">

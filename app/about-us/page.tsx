@@ -24,8 +24,8 @@ export default function AboutUsPage() {
       <ProcessSection />
 
       {/* Team Section - Original content */}
-      <div className="container mx-auto px-16 py-16">
-        <div className="text-center mb-12">
+      {/* <div className="container mx-auto px-16 py-16"> */}
+        {/* <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">
             Our Leadership <span className="text-red-600">Team</span>
           </h2>
@@ -33,8 +33,8 @@ export default function AboutUsPage() {
             Meet the dedicated professionals who lead our company with vision, expertise, and a commitment to
             excellence.
           </p>
-        </div>
-
+        </div> */}
+{/* 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
@@ -64,8 +64,8 @@ export default function AboutUsPage() {
             <h3 className="text-xl font-bold text-gray-900">Emily Rodriguez</h3>
             <p className="text-red-600 font-medium">CMO</p>
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </main>
   )
 }

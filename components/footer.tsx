@@ -41,8 +41,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-6">About Us</h3>
             <p className="text-gray-300 mb-6">
-              Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit consectetur adipiscing elit.
+            At Infiniti Auto Group, we combine passion, precision, and professionalism to bring you a premium car experience. Whether you're renting, buying, or inquiring, we’re here to help.
             </p>
             <div className="flex items-center">
               <Input
@@ -80,11 +79,11 @@ export default function Footer() {
                   <span className="mr-2">›</span> Contact
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/terms-conditions" className="text-gray-300 hover:text-red-500 flex items-center">
                   <span className="mr-2">›</span> Terms & Conditions
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
