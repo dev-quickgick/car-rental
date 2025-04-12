@@ -1,7 +1,7 @@
 "use client"
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
@@ -39,6 +39,8 @@ export default function ManageCars() {
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false)
   const [editingCar, setEditingCar] = useState<Car | null>(null)
   const [imageFile, setImageFile] = useState<File | null>(null)
+  const imageInputRef = useRef<HTMLInputElement | null>(null)
+
 
   // const fetchCars = await getCars();
   // // console.log(fetchCars);
@@ -119,6 +121,9 @@ export default function ManageCars() {
       })
 
       setImageFile(null)
+      if (imageInputRef.current) {
+        imageInputRef.current.value = ""
+      }
       
     } else {
       alert(result.message)
@@ -328,6 +333,7 @@ export default function ManageCars() {
                 accept="image/*"
                 required
                 className="w-full text-black"
+                ref={imageInputRef}
                 onChange={(e)=>{  
                   if (e.target.files && e.target.files[0]) {
                     setImageFile(e.target.files[0])
@@ -379,7 +385,7 @@ export default function ManageCars() {
                         </Button>
                       </DialogTrigger>
                       <DialogContent>
-                        <DialogHeader>
+                        <DialogHeader className="text-black">
                           <DialogTitle>Edit Car</DialogTitle>
                           <DialogDescription>Make changes to the car details below.</DialogDescription>
                         </DialogHeader>

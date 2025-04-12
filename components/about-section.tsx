@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { Target } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -115,8 +116,11 @@ export default function AboutSection() {
             </div>
 
             <div className="flex items-center">
-              <Button className="bg-red-600 hover:bg-red-700 text-white mr-5 text-sm py-1.5">More About Us</Button>
-
+              <Link href="/about-us">
+                <Button className="bg-red-600 hover:bg-red-700 text-white mr-5 text-sm py-1.5">
+                  More About Us
+                </Button>
+              </Link>
               <div className="flex items-center">
                 <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white">
                   <Image src="/images/attachment-img.jpg" alt="William Burgess" fill className="object-cover" />

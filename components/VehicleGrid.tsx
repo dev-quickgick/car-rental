@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { Calendar, CarIcon, Fuel, Gauge, User } from "lucide-react"
 import type { Car } from "@/lib/supabase"
+import Link from "next/link"
 
 interface VehicleGridProps {
   initialCars?: Car[]
@@ -87,10 +88,11 @@ export default function VehicleGrid({ initialCars = [] }: VehicleGridProps) {
                           <span>{car.mileage}</span>
                         </div>
                       </div>
-
-                      <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-full font-medium text-sm">
-                        Book Now
-                      </button>
+                      <Link href="/">
+                        <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-full font-medium text-sm">
+                          Book Now
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

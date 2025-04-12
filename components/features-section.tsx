@@ -30,7 +30,7 @@ export default function FeaturesSection() {
     {
       title: "First Class services",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?",
+        "Enjoy a luxurious driving experience with our top-of-the-line vehicles and professional service team, tailored to meet your comfort.",
       icon: <Trophy className="w-5 h-5 text-navy-900" />,
       position: "left-top",
       delay: 0.1,
@@ -38,7 +38,7 @@ export default function FeaturesSection() {
     {
       title: "24/7 road assistance",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?",
+        "Travel worry-free. Our 24/7 support ensures that help is always just a call away, no matter the road or time.",
       icon: <PhoneCall className="w-5 h-5 text-navy-900" />,
       position: "left-bottom",
       delay: 0.3,
@@ -46,7 +46,7 @@ export default function FeaturesSection() {
     {
       title: "Quality at Minimum",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?",
+        "Premium does not have to mean pricey. Get the best quality vehicles and services at competitive rates.",
       icon: <Diamond className="w-5 h-5 text-navy-900" />,
       position: "right-top",
       delay: 0.2,
@@ -54,7 +54,7 @@ export default function FeaturesSection() {
     {
       title: "Free Pick-Up & Drop-Off",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?",
+        "Wherever you are, we will reach you. Take advantage of our complimentary doorstep pick-up and drop-off service.",
       icon: <MapPin className="w-5 h-5 text-navy-900" />,
       position: "right-bottom",
       delay: 0.4,
@@ -76,8 +76,7 @@ export default function FeaturesSection() {
             className={`text-gray-600 max-w-4xl mx-auto text-sm fadeInUp ${isVisible ? "active" : ""}`}
             style={{ transitionDelay: "0.2s" }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi
-            accusantium at cum harum, excepturi, quia tempora cupiditate!
+              We take pride in delivering a premium car rental experience—offering world-class service, exceptional reliability, and unmatched convenience, every time you ride.
           </p>
         </div>
 

@@ -44,14 +44,16 @@ export default function Footer() {
             At Infiniti Auto Group, we combine passion, precision, and professionalism to bring you a premium car experience. Whether you're renting, buying, or inquiring, we’re here to help.
             </p>
             <div className="flex items-center">
-              <Input
+              {/* <Input
                 type="email"
                 placeholder="Enter your email"
                 className="bg-white text-gray-800 rounded-l-full rounded-r-none border-0 focus-visible:ring-0"
-              />
-              <Button className="bg-red-600 hover:bg-red-700 text-white rounded-l-none rounded-r-full">
-                Contact Now
-              </Button>
+              /> */}
+              <Link href="/contact">
+                <Button className="bg-red-600 hover:bg-red-700 text-white rounded-l-none rounded-full">
+                  Contact Now
+                </Button>
+              </Link>
             </div>
           </div>
 
